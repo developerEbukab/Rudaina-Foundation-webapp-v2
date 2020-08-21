@@ -1,0 +1,55 @@
+body {
+  font-family: $font-primary;
+  letter-spacing: 0.01em; 
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.heading{
+  display: inline-block;
+  padding-bottom: .5rem;
+  position: relative;
+  // margin-bottom: 2rem;
+  color: white;
+
+  &:before{
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 1px;
+    bottom: 0;
+    border-bottom: 3px solid $color-primary;
+  }
+}
+
+.authInstructionText{
+  @include transition;
+  cursor: pointer;
+  color: $color-primary;
+}
+
+
+.authInstructionTextNoColor{
+  @include transition;
+  cursor: pointer;
+  color: $color-grey-dark;
+  font-style: italic;
+}
+
+.authInstructionText:hover{
+  color: $color-primary-dark;
+}
+
+
+// body {
+//   margin: 0;
+//   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+//     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+//     sans-serif;
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+// }
+

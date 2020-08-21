@@ -1,0 +1,121 @@
+@import "../../sass/mixins";
+@import "../../sass/variables";
+
+.header-container{
+  height: 90px;
+  font-size: 1.8rem;
+  //background-color: grey;
+  box-shadow: 0px 0px 4px 1px darken($color: $color-grey-light, $amount: 5);
+  //border-bottom: 1px solid grey;
+
+  .header{
+    @include layout-padded;
+    // background-color: pink;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+    margin-bottom: 25px;
+
+    .logo-container {
+      //background-color: red;
+      height: 100%;
+      width: 70px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .links{
+      width: 50%;
+      // background-color: salmon;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      // background-color: green;
+
+      .link{
+        margin-right: 2.5rem;
+        text-transform: capitalize;
+        border-bottom: 2px solid  transparent;
+        padding: .5rem;
+      }
+
+      .linkDropdown{
+        width: 5rem;
+        height: 5rem;
+        padding: .3rem;
+        //border-top: 2px solid $color-primary;
+        //border-right: 2px solid $color-primary;
+        @include borderRadius(500px);
+        border-radius: 1000px;
+        background-color: darken($color: $color-grey-light, $amount: 10);
+        //color: $color-grey-light;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include transitionWithTime(.6s);
+
+        &:hover{
+          box-shadow: 0px 6px 10px 6px darken($color: $color-grey-light, $amount: 10);
+          background-color: $color-secondary;
+          color: $color-white;
+        }
+      }
+
+      .linkDropdownActive{
+        width: 5rem;
+        height: 5rem;
+        padding: .3rem;
+        box-shadow: 0px 6px 10px 6px darken($color: $color-grey-light, $amount: 10);
+        @include borderRadius(500px);
+        border-radius: 1000px;
+        background-color: $color-secondary;
+        color: $color-white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .link:hover {
+        /*MUSTOCCURAFTERVISITED*/font-weight: bold;
+        //text-transform: uppercase;
+        color: $color-primary;
+        //border-bottom: 2px solid  $color-primary;
+        @include underline;
+        -webkit-transform: rotate(5deg);
+        -o-transform: rotate(5deg);
+        //box-shadow: 0px 0px 4px 1px grey;
+}
+      
+      .link:active {
+        /*MUSTOCCURAFTERVISITED*/font-weight: bold;
+        //text-transform: uppercase;
+        color: $color-primary;
+        //border-bottom: 2px solid  $color-primary;
+        @include underline;
+        -webkit-transform: rotate(5deg);
+        -o-transform: rotate(5deg);
+        //box-shadow: 0px 0px 4px 1px grey;
+      }
+
+      .sign-in{
+        -webkit-transform: rotate(5deg);
+        -o-transform: rotate(5deg);
+        color:   $color-primary;
+      }
+
+      .active{
+        color: $color-primary;
+        font-weight: bold;
+        //border-bottom: 2px solid  $color-primary;
+        @include underline;
+        -webkit-transform: rotate(5deg);
+        -o-transform: rotate(5deg);
+        //box-shadow: 0px 0px 4px 1px grey;
+      }
+    }
+  }
+}
+

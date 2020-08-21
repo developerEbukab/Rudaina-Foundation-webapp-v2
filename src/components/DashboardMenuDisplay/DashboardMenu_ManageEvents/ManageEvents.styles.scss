@@ -1,0 +1,99 @@
+@import "../../../sass/mixins";
+@import "../../../sass/variables";
+
+.manageEvents{
+  display:  grid;
+  grid-template-columns: 40% 59%;
+  height: 100%;
+  grid-column-gap: 1%;
+  background-color: darken($color: $color-grey-light, $amount: 1);
+
+  .addEvent{
+    background-color: $color-white;
+    height: 100%;
+    @include borderRadius(1rem);
+    padding : 1rem;
+
+    .title{
+      font-size: 18px;
+      font-weight: bold;
+      display: inline-block;
+      padding-bottom: 3px;
+      position: relative;
+      margin-bottom: 1rem;
+
+      @include underline;
+    }
+
+    .buttonContainer{
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 3rem;
+    }
+  }
+
+  .viewEvents{
+    background-color: $color-white;
+    height: 82vh;
+    @include borderRadius(1rem);
+    padding : 1rem 2rem;
+
+    .eventsOptions{
+      display: flex;
+      align-items: center;
+      //background-color: green;
+      //height: 5%;
+      height: 5vh;
+
+      .option{
+        font-size: 18px;
+        display: inline-block;
+        padding-bottom: 3px;
+        position: relative;
+        margin-bottom: 1rem;
+        margin-right: 2rem;
+        cursor: pointer;
+        @include transition;
+
+        &:hover{
+          //@include underline;
+          font-weight: bold;
+        }
+      }
+
+      .activeOption{
+        font-size: 18px;
+        font-weight: bold;
+        display: inline-block;
+        padding-bottom: 3px;
+        position: relative;
+        margin-bottom: 1rem;
+        margin-right: 2rem;
+        cursor: pointer;
+
+        @include underline;
+      }
+    }
+    .eventsContainer{
+      height: 95%;
+      width: 100%;
+      //background-color: blue;
+
+      .loadingEvents{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .events{
+        //background-color: red;
+        width: 100%;
+        height: 77vh;
+        overflow: hidden;
+        overflow-y: scroll;
+      }
+    }
+  }
+}

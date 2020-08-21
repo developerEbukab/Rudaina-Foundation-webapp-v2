@@ -1,0 +1,14 @@
+@import "../../sass/mixins";
+@import "../../sass/variables";
+
+.auth-container{
+  min-height: 60vh;
+  .auth{
+
+    @include layout-padded;
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    justify-content: center;
+    padding: 6rem 0;
+  }
+}

@@ -1,0 +1,46 @@
+@import "../../sass/mixins";
+@import "../../sass/variables";
+
+.DashboardMenuitemNoBottomBorder{
+  border-bottom: 0px solid transparent;
+}
+
+.DashboardMenuitem{
+  display: flex;
+  align-items: center;
+  border-left: 3px solid $color-primary;
+  border-top: 3px solid $color-grey-light;
+  border-bottom: 3px solid $color-grey-light;
+  padding : 1rem 0;
+  //color: $color-grey-dark;
+  @include transitionWithTime(.3s);
+  margin-bottom: 2px;
+  //background-color: $color-white;
+
+  
+
+  i{
+    margin: 0 2rem 0 1rem;
+    color: $color-primary;
+  }
+
+  &:hover{
+    background-color: darken($color: $color-grey-light, $amount: 3);
+    color: $color-black;
+    cursor: pointer;
+
+    i{
+      color: $color-primary;
+    }
+  }
+}
+
+.DashboardMenuitemActive{
+  background-color: lighten($color: $color-primary, $amount: 0);
+  color: $color-white;
+  cursor: pointer;
+
+  i{
+    color: $color-white;
+  }
+}

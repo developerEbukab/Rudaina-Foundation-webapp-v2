@@ -1,0 +1,75 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    // This defines what 1rem is
+    font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+
+    @include respond(tab-land) { // width < 1200?
+        font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
+    }
+
+    @include respond(tab-port) { // width < 900?
+        font-size: 50%; //1 rem = 8px, 8/16 = 50%
+    }
+    
+    @include respond(big-desktop) {
+        font-size: 75%; //1rem = 12, 12/16
+    }
+}
+
+body {
+    box-sizing: border-box;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    @include transition;
+}
+
+// a:hover{
+//     font-weight: bold;
+//     color: red;
+//     border-bottom: 1px solid  red;
+//   }
+
+input, button{
+    font-family: inherit;
+    font-size: inherit;
+    //background-color: transparent;
+}
+
+textarea:focus, input:focus, input:active,button, button:focus, button:active, select:focus, select:active{
+    outline: none;
+    font-family: inherit;
+    border: none
+    //background-color: transparent;
+}
+
+.authBottomMarginTop{
+    margin-top: 3rem;
+  }
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px $color-grey-light inset !important;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
